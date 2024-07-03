@@ -110,3 +110,4 @@ out
 .yarn/install-state.gz
 .pnp.\*
 .idea
+*.bak
