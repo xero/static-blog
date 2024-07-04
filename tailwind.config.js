@@ -19,7 +19,7 @@ export default {
 			green: "#719611",
 			pumpkin: "#ff9800",
 			orange: "#c80",
-			red: "#ff6a6a",
+			red: "#da3272",
 			crimson: "#aa4450",
 			fog: "#999",
 			white: "#c0c0c0",
