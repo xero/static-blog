@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 <!--
       ┐ │ ┬─┐ ┬─┐┌─┐
@@ -10,11 +10,10 @@
 ┆  ┆┆ └┴─┘┆─┘┆─┘┆└┘┘ ┆┆  ┆
 -->
 	<title>{{&description}}</title>
-	<meta charset="utf-8">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta charset="UTF-8">
 	<meta name="author" content="xero harrison">
 	<meta name="description" content="{{&description}}">
-	<meta name="keywords" content="blog, programming, code, art, ascii, pixel, text art, ansi, lab, notes, graffiti, neovim, vim, linux, unix, nerd, bun.sh, htmx, tailwindcss, xero, x-e.ro, xxe.ro, 0w.nz, xero.style">
+	<meta name="keywords" content="blog, programming, code, art, ascii, pixel, text art, ansi, lab, notes, graffiti, neovim, vim, linux, unix, edc, graffiti, nerd, bun.sh, htmx, tailwindcss, xero, x-e.ro, xxe.ro, 0w.nz, xero.style">
 	<meta name="theme-color" content="#222222">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="{{&domain}}/ui/ico/favicon.ico">
@@ -24,12 +23,10 @@
 	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{&domain}}/ui/ico/icon-57.png">
 	<link rel="apple-touch-icon-precomposed" sizes="16x16" href="{{&domain}}/ui/ico/icon-16.png">
 	<link rel="stylesheet" type="text/css" href="{{&domain}}/ui/theme.css?{{&ripcache}}">
-	<link rel="stylesheet" type="text/css" href="{{&domain}}/ui/hack.css">
 	<script src="{{&domain}}/ui/htmx.min.js"></script>
 	<script src="{{&domain}}/ui/head-support.js"></script>
-	<meta name="htmx-config" content='{"selfRequestsOnly":"true","timeout":"30000"}'>
+	<meta name="htmx-config" content='{"selfRequestsOnly":"true"}'>
 </head>
-
 <body>
 	<header>
 		<nav>
@@ -43,27 +40,23 @@
 				<li><a href="https://code.x-e.ro"><i class="nf nf-fa-code"></i><b>code</b></a></li>
 				<li><a href="https://xero.style"><i class="nf nf-fa-camera"></i><b>vids</b></a></li>
 				<li><a href="https://lab.x-e.ro"><i class="nf nf-fa-flask"></i><b>lab</b></a></li>
-				<li><a href="https://fonts.x-e.ro"><i class="nf nf-seti-font"></i><b>fonts</b></a></li>
+				<li><a href="https://fonts.xero.style"><i class="nf nf-seti-font"></i><b>fonts</b></a></li>
 				<li><a href="https://etc.x-e.ro"><i class="nf nf-fa-bolt"></i><b>etc</b></a></li>
 			</ul>
 		</nav>
 	</header>
-
 	<main id="main" hx-boost="true" hx-push-url="true" hx-target="#content" hx-indicator="#loading">
 		<section id="content">
 			{{&content}}
 		</section>
-
 		<aside>
 			{{&sidebar}}
 		</aside>
 	</main>
-
-	<section id="loading" class="htmx-indicator">
+	<section id="loading" class="htmx-indicator" hx-on:click="htmx.toggleClass(htmx.find('#loading'), 'shown')">
 		<img src="{{&domain}}/ui/img/metroid-super.gif" alt="loading..." title="loading..." />
 		<h1>loading...</h1>
 	</section>
-
 	<footer>
 		<section id="cc"><a href="https://creativecommons.org/licenses/by-sa/4.0/"
 				title="creative commons - CC-BY-SA-4.0 attribution-shareAlike">
