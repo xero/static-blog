@@ -3,6 +3,10 @@ module.exports = {
 		"tailwindcss/nesting": {},
 		tailwindcss: {},
 		autoprefixer: {},
-		cssnano: { preset: ["default", { discardComments: { removeAll: true } }] },
+		"postcss-csso": {
+			restructure: true,
+			forceMediaMerge: true,
+			comments: false
+		}
 	}
 };
