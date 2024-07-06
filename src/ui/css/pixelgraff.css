@@ -6,11 +6,11 @@
   font-family: Hack;
   font-weight: normal;
   font-style: normal;
-  src: url(../gfont/hack.eot);
+  src: url(../font/hack.eot);
   src:
-    url(../gfont/hack.eot?#iefix) format("embedded-opentype"),
-    url(../gfont/hack.woff2) format("woff2"),
-    url(../gfont/hack.woff) format("woff");
+    url(../font/hack.eot?#iefix) format("embedded-opentype"),
+    url(../font/hack.woff2) format("woff2"),
+    url(../font/hack.woff) format("woff");
 }
 
 * {
@@ -200,7 +200,7 @@ center {
 
 header {
   nav {
-    background: #111 url(../gimg/nav-bg-lil.png);
+    background: #111 url(../img/nav-bg-lil.png);
     background-position: center center;
     background-size: 120% auto;
     min-height: 74px;
@@ -251,7 +251,7 @@ header {
       display: block;
       position: absolute;
       top: 0;
-      background: url(../gimg/xero-graff-alt-lil.png) top center
+      background: url(../img/xero-graff-alt-lil.png) top center
         no-repeat;
       width: 197px;
       height: 86px;
@@ -266,7 +266,7 @@ header {
 
 #loading {
   @apply fixed block p-3 ml-8;
-  background: #222 url(../gimg/hash.png);
+  background: #222 url(../img/hash.png);
   pointer-events: none;
   z-index: 999;
   top: 10px;
@@ -293,7 +293,7 @@ header {
 
       header {
         @apply mb-2 pb-3;
-        background: url(../gimg/hash.png);
+        background: url(../img/hash.png);
 
         h2 {
           @apply text-xl w-full bg-grey;
@@ -368,7 +368,7 @@ header {
       blockquote cite {
         @apply block text-base text-fog;
         padding: 5px 0 0px 40px;
-        background-image: url(../gimg/arrow-dark-half.png);
+        background-image: url(../img/arrow-dark-half.png);
         background-repeat: no-repeat;
         background-position: 20px 0;
         min-height: 20px;
@@ -474,7 +474,7 @@ header {
 
       footer.meta {
         @apply text-xs text-white mt-0 mb-6 mr-0 ml-0 inline-block w-full bg-transparent bg-no-repeat overflow-hidden;
-        background-image: url(../gimg/arrow-dark.png);
+        background-image: url(../img/arrow-dark.png);
         background-position: 19px 9px;
 
         .date,
@@ -522,7 +522,7 @@ header {
 
     .pagination {
       @apply w-full bg-repeat mb-20;
-      background: url(../gimg/hash.png);
+      background: url(../img/hash.png);
 
       ul {
         @apply list-none w-full text-center p-2;
@@ -550,7 +550,7 @@ header {
     @apply flex flex-col basis-full;
 
     h3 {
-      background: url(../gimg/hash.png);
+      background: url(../img/hash.png);
       @apply mt-5 text-snow;
 
       em {
@@ -725,7 +725,7 @@ footer {
 @media (min-width: 768px) {
   header {
     nav {
-      background: #111 url(../gimg/nav-bg.png) center -20px !important;
+      background: #111 url(../img/nav-bg.png) center -20px !important;
       height: 132px;
       @apply !bg-cover;
     }
@@ -798,7 +798,7 @@ footer {
     }
 
     #logo a {
-      background: url(../gimg/xero-graff-alt.png) top center
+      background: url(../img/xero-graff-alt.png) top center
         no-repeat !important;
       width: 394px !important;
       height: 172px !important;
@@ -943,7 +943,7 @@ footer {
     }
 
     #logo a {
-      background: url(../gimg/xero-graff-alt.png) top center
+      background: url(../img/xero-graff-alt.png) top center
         no-repeat !important;
       width: 394px !important;
       height: 172px !important;
@@ -1040,11 +1040,11 @@ footer {
 #blog {
   header {
     nav {
-      background-image: url(../gimg/nav-bg-lil.png) !important;
+      background-image: url(../img/nav-bg-lil.png) !important;
       overflow: auto;
 
       #logo a {
-        background-image: url(../gimg/xero-graff-alt-lil.png) !important;
+        background-image: url(../img/xero-graff-alt-lil.png) !important;
       }
 
       #linx {
@@ -1066,12 +1066,12 @@ footer {
 
   header {
     nav {
-      background-image: url(../gimg/nav-bg-lil4.png) !important;
+      background-image: url(../img/nav-bg-lil4.png) !important;
       overflow: auto;
       border-bottom: 2px solid #fff;
 
       #logo a {
-        background-image: url(../gimg/xero-graff-alt-lil4.png) !important;
+        background-image: url(../img/xero-graff-alt-lil4.png) !important;
       }
 
       #linx {
@@ -1134,11 +1134,11 @@ footer {
 
   header {
     nav {
-      background-image: url(../gimg/nav-bg-lil3.png) !important;
+      background-image: url(../img/nav-bg-lil3.png) !important;
       overflow: auto;
 
       #logo a {
-        background-image: url(../gimg/xero-graff-alt-lil3.png) !important;
+        background-image: url(../img/xero-graff-alt-lil3.png) !important;
       }
 
       #linx {
@@ -1157,11 +1157,11 @@ footer {
 #whois {
   header {
     nav {
-      background-image: url(../gimg/nav-bg-lil6.png) !important;
+      background-image: url(../img/nav-bg-lil6.png) !important;
       overflow: auto;
 
       #logo a {
-        background-image: url(../gimg/xero-graff-alt-lil6.png) !important;
+        background-image: url(../img/xero-graff-alt-lil6.png) !important;
       }
 
       #linx {
@@ -1390,11 +1390,11 @@ footer {
 
   header {
     nav {
-      background-image: url(../gimg/nav-bg-lil2.png) !important;
+      background-image: url(../img/nav-bg-lil2.png) !important;
       overflow: auto;
 
       #logo a {
-        background-image: url(../gimg/xero-graff-alt-lil2.png) !important;
+        background-image: url(../img/xero-graff-alt-lil2.png) !important;
       }
 
       #linx {
@@ -1409,11 +1409,11 @@ footer {
 #error {
   header {
     nav {
-      background-image: url(../gimg/nav-bg-lil5.png) !important;
+      background-image: url(../img/nav-bg-lil5.png) !important;
       overflow: auto;
 
       #logo a {
-        background-image: url(../gimg/xero-graff-alt-lil5.png) !important;
+        background-image: url(../img/xero-graff-alt-lil5.png) !important;
       }
 
       #linx {
@@ -1451,10 +1451,10 @@ footer {
   #blog {
     header {
       nav {
-        background-image: url(../gimg/nav-bg.png) !important;
+        background-image: url(../img/nav-bg.png) !important;
 
         #logo a {
-          background-image: url(../gimg/xero-graff-alt.png) !important;
+          background-image: url(../img/xero-graff-alt.png) !important;
         }
       }
     }
@@ -1463,10 +1463,10 @@ footer {
   #code {
     header {
       nav {
-        background-image: url(../gimg/nav-bg4.png) !important;
+        background-image: url(../img/nav-bg4.png) !important;
 
         #logo a {
-          background-image: url(../gimg/xero-graff-alt4.png) !important;
+          background-image: url(../img/xero-graff-alt4.png) !important;
         }
       }
     }
@@ -1493,10 +1493,10 @@ footer {
 
     header {
       nav {
-        background-image: url(../gimg/nav-bg3.png) !important;
+        background-image: url(../img/nav-bg3.png) !important;
 
         #logo a {
-          background-image: url(../gimg/xero-graff-alt3.png) !important;
+          background-image: url(../img/xero-graff-alt3.png) !important;
         }
       }
     }
@@ -1505,10 +1505,10 @@ footer {
   #whois {
     header {
       nav {
-        background-image: url(../gimg/nav-bg6.png) !important;
+        background-image: url(../img/nav-bg6.png) !important;
 
         #logo a {
-          background-image: url(../gimg/xero-graff-alt6.png) !important;
+          background-image: url(../img/xero-graff-alt6.png) !important;
         }
       }
     }
@@ -1517,10 +1517,10 @@ footer {
   #feeds {
     header {
       nav {
-        background-image: url(../gimg/nav-bg2.png) !important;
+        background-image: url(../img/nav-bg2.png) !important;
 
         #logo a {
-          background-image: url(../gimg/xero-graff-alt2.png) !important;
+          background-image: url(../img/xero-graff-alt2.png) !important;
         }
       }
     }
@@ -1529,10 +1529,10 @@ footer {
   #error {
     header {
       nav {
-        background-image: url(../gimg/nav-bg5.png) !important;
+        background-image: url(../img/nav-bg5.png) !important;
 
         #logo a {
-          background-image: url(../gimg/xero-graff-alt5.png) !important;
+          background-image: url(../img/xero-graff-alt5.png) !important;
         }
       }
     }
@@ -1575,7 +1575,7 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
-  background: #222 url(../gimg/xero-graff-splash.png) no-repeat;
+  background: #222 url(../img/xero-graff-splash.png) no-repeat;
   background-position: center center;
 
   .centerLogo {
