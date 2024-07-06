@@ -3,19 +3,19 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "hack";
+  font-family: Hack;
   font-weight: normal;
   font-style: normal;
-  src: url(font/hack.eot);
+  src: url(../gfont/hack.eot);
   src:
-    url("font/hack.eot?#iefix") format("embedded-opentype"),
-    url(font/hack.woff2) format("woff2"),
-    url(font/hack.woff) format("woff");
+    url(../gfont/hack.eot?#iefix) format("embedded-opentype"),
+    url(../gfont/hack.woff2) format("woff2"),
+    url(../gfont/hack.woff) format("woff");
 }
 
 * {
-  font-family: Hack, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
-    monospace;
+  font-family: Hack, "Menlo", "Monaco", "Consolas", "Liberation Mono",
+    "Courier New", monospace;
 }
 
 body {
@@ -200,7 +200,7 @@ center {
 
 header {
   nav {
-    background: #111 url(img/nav-bg-lil.png);
+    background: #111 url(../gimg/nav-bg-lil.png);
     background-position: center center;
     background-size: 120% auto;
     min-height: 74px;
@@ -251,7 +251,8 @@ header {
       display: block;
       position: absolute;
       top: 0;
-      background: url(img/xero-graff-alt-lil.png) top center no-repeat;
+      background: url(../gimg/xero-graff-alt-lil.png) top center
+        no-repeat;
       width: 197px;
       height: 86px;
       z-index: 99;
@@ -265,7 +266,7 @@ header {
 
 #loading {
   @apply fixed block p-3 ml-8;
-  background: #222 url(img/hash.png);
+  background: #222 url(../gimg/hash.png);
   pointer-events: none;
   z-index: 999;
   top: 10px;
@@ -287,9 +288,12 @@ header {
     @apply flex flex-col basis-full;
 
     article {
+      max-width: 750px;
+      margin: 0 auto;
+
       header {
         @apply mb-2 pb-3;
-        background: url(img/hash.png);
+        background: url(../gimg/hash.png);
 
         h2 {
           @apply text-xl w-full bg-grey;
@@ -308,13 +312,14 @@ header {
         width: 0;
         min-width: 100%;
       }
+
       video,
       iframe,
       pre,
       code {
         @apply my-2;
-        max-width: 380px;
-        max-height: auto;
+        max-width: 380px !important;
+        max-height: auto !important;
       }
 
       h3.read {
@@ -363,7 +368,7 @@ header {
       blockquote cite {
         @apply block text-base text-fog;
         padding: 5px 0 0px 40px;
-        background-image: url(img/arrow-dark-half.png);
+        background-image: url(../gimg/arrow-dark-half.png);
         background-repeat: no-repeat;
         background-position: 20px 0;
         min-height: 20px;
@@ -469,7 +474,7 @@ header {
 
       footer.meta {
         @apply text-xs text-white mt-0 mb-6 mr-0 ml-0 inline-block w-full bg-transparent bg-no-repeat overflow-hidden;
-        background-image: url(img/arrow-dark.png);
+        background-image: url(../gimg/arrow-dark.png);
         background-position: 19px 9px;
 
         .date,
@@ -517,7 +522,7 @@ header {
 
     .pagination {
       @apply w-full bg-repeat mb-20;
-      background: url(img/hash.png);
+      background: url(../gimg/hash.png);
 
       ul {
         @apply list-none w-full text-center p-2;
@@ -545,7 +550,7 @@ header {
     @apply flex flex-col basis-full;
 
     h3 {
-      background: url(img/hash.png);
+      background: url(../gimg/hash.png);
       @apply mt-5 text-snow;
 
       em {
@@ -691,6 +696,7 @@ footer {
         iframe,
         code,
         pre {
+          min-width: 550px !important;
           max-width: 550px !important;
         }
       }
@@ -708,6 +714,7 @@ footer {
         code,
         pre {
           @apply text-sm;
+          min-width: 600px !important;
           max-width: 740px !important;
         }
       }
@@ -718,7 +725,7 @@ footer {
 @media (min-width: 768px) {
   header {
     nav {
-      background: #111 url(img/nav-bg.png) center -20px !important;
+      background: #111 url(../gimg/nav-bg.png) center -20px !important;
       height: 132px;
       @apply !bg-cover;
     }
@@ -791,7 +798,8 @@ footer {
     }
 
     #logo a {
-      background: url(img/xero-graff-alt.png) top center no-repeat !important;
+      background: url(../gimg/xero-graff-alt.png) top center
+        no-repeat !important;
       width: 394px !important;
       height: 172px !important;
       margin-left: 30px !important;
@@ -810,6 +818,7 @@ footer {
         video,
         iframem code,
         pre {
+          min-width: 590px !important;
           max-width: 590px !important;
         }
 
@@ -934,7 +943,8 @@ footer {
     }
 
     #logo a {
-      background: url(img/xero-graff-alt.png) top center no-repeat !important;
+      background: url(../gimg/xero-graff-alt.png) top center
+        no-repeat !important;
       width: 394px !important;
       height: 172px !important;
       margin-left: 5% !important;
@@ -954,6 +964,8 @@ footer {
         code,
         pre {
           @apply text-base;
+          width: 100% !important;
+          min-width: 100% !important;
           max-width: 100% !important;
         }
 
@@ -1028,11 +1040,11 @@ footer {
 #blog {
   header {
     nav {
-      background-image: url(img/nav-bg-lil.png) !important;
+      background-image: url(../gimg/nav-bg-lil.png) !important;
       overflow: auto;
 
       #logo a {
-        background-image: url(img/xero-graff-alt-lil.png) !important;
+        background-image: url(../gimg/xero-graff-alt-lil.png) !important;
       }
 
       #linx {
@@ -1054,12 +1066,12 @@ footer {
 
   header {
     nav {
-      background-image: url(img/nav-bg-lil4.png) !important;
+      background-image: url(../gimg/nav-bg-lil4.png) !important;
       overflow: auto;
       border-bottom: 2px solid #fff;
 
       #logo a {
-        background-image: url(img/xero-graff-alt-lil4.png) !important;
+        background-image: url(../gimg/xero-graff-alt-lil4.png) !important;
       }
 
       #linx {
@@ -1096,28 +1108,37 @@ footer {
   }
 
   #glitch {
-    display: block;
-  }
+    img {
+      display: inline-block;
+    }
 
-  #burger {
-    width: 114px;
-    height: 160px;
-    float: left;
-  }
+    #burger {
+      width: 229px !important;
+      max-width: 229px !important;
+      min-width: 229px !important;
+      height: 320px !important;
+      max-height: 320px !important;
+      min-height: 320px !important;
+    }
 
-  #codez {
-    float: left;
-    width: 220px;
-    height: 160px;
+    #codez {
+      width: 440px !important;
+      max-width: 440px !important;
+      min-width: 440px !important;
+      height: 320px !important;
+      max-height: 320px !important;
+      min-height: 320px !important;
+      float: left !important;
+    }
   }
 
   header {
     nav {
-      background-image: url(img/nav-bg-lil3.png) !important;
+      background-image: url(../gimg/nav-bg-lil3.png) !important;
       overflow: auto;
 
       #logo a {
-        background-image: url(img/xero-graff-alt-lil3.png) !important;
+        background-image: url(../gimg/xero-graff-alt-lil3.png) !important;
       }
 
       #linx {
@@ -1136,11 +1157,11 @@ footer {
 #whois {
   header {
     nav {
-      background-image: url(img/nav-bg-lil6.png) !important;
+      background-image: url(../gimg/nav-bg-lil6.png) !important;
       overflow: auto;
 
       #logo a {
-        background-image: url(img/xero-graff-alt-lil6.png) !important;
+        background-image: url(../gimg/xero-graff-alt-lil6.png) !important;
       }
 
       #linx {
@@ -1166,15 +1187,13 @@ footer {
 
   main {
     aside {
-      @apply inline-block float-right;
-      width: 40%;
-      height: 40%;
-      float: right;
+      @apply float-right overflow-hidden clear-none;
       margin: 0px 0px 5px 10px;
-
-      img {
-        width: 100%;
-      }
+      width: 150px !important;
+      height: 229px !important;
+      background: url(https://whois.x-e.ro/ui/img/whois/x0-sm.png);
+      background-size: contain;
+      background-repeat: no-repeat;
     }
 
     #age {
@@ -1185,7 +1204,7 @@ footer {
     h2,
     h3,
     h6 {
-      @apply !text-lime clear-both;
+      @apply !text-lime;
     }
 
     h5 {
@@ -1221,6 +1240,14 @@ footer {
       list-style-type: none;
     }
 
+    kbd {
+      background: #121212 !important;
+
+      a {
+        color: #42692c !important;
+      }
+    }
+
     .nf {
       @apply mr-3;
       color: #fff;
@@ -1235,17 +1262,107 @@ footer {
         @apply not-italic;
         color: #fff;
       }
+
+      .key {
+        font-size: 75%;
+      }
     }
 
     #social {
-      @apply inline-block clear-both;
+      ul {
+        @apply !float-right !list-none m-0 p-0 mb-4;
 
-      a {
-        @apply inline-block float-left p-2;
+        li {
+          @apply !float-left m-0 p-0;
+
+          a {
+            @apply inline-block mr-2 mb-2 p-0;
+            background-repeat: no-repeat;
+            background-position: center center;
+            height: 64px !important;
+            width: 64px !important;
+            min-height: 64px !important;
+            min-width: 64px !important;
+            max-height: 64px !important;
+            max-width: 64px !important;
+          }
+
+          #github {
+            background-image: url(https://whois.x-e.ro/ui/img/whois/github.png);
+          }
+
+          #youtube {
+            background-image: url(https://whois.x-e.ro/ui/img/whois/youtube.png);
+          }
+
+          #instagram {
+            background-image: url(https://whois.x-e.ro/ui/img/whois/insta.png);
+          }
+
+          #twitter {
+            background-image: url(https://whois.x-e.ro/ui/img/whois/twitter.png);
+          }
+
+          #discord {
+            background-image: url(https://whois.x-e.ro/ui/img/whois/discord.png);
+          }
+
+          #telegram {
+            background-image: url(https://whois.x-e.ro/ui/img/whois/telegram.png);
+          }
+
+          #facebook {
+            background-image: url(https://whois.x-e.ro/ui/img/whois/facebook.png);
+          }
+
+          #tumblr {
+            background-image: url(https://whois.x-e.ro/ui/img/whois/tumblr.png);
+          }
+
+          #stackoverflow {
+            background-image: url(https://whois.x-e.ro/ui/img/whois/stackoverflow.png);
+          }
+
+          #reddit {
+            background-image: url(https://whois.x-e.ro/ui/img/whois/reddit.png);
+          }
+
+          #mastodon {
+            background-image: url(https://whois.x-e.ro/ui/img/whois/mastodon.png);
+          }
+
+          #bluesky {
+            background-image: url(https://whois.x-e.ro/ui/img/whois/bsky.png);
+          }
+
+          #gitlab {
+            background-image: url(https://whois.x-e.ro/ui/img/whois/gitlab.png);
+          }
+
+          #sourcehut {
+            background-image: url(https://whois.x-e.ro/ui/img/whois/srht.png);
+          }
+
+          #bandcamp {
+            background-image: url(https://whois.x-e.ro/ui/img/whois/bandcamp.png);
+          }
+        }
       }
+    }
 
-      img {
-        @apply border-0;
+    #rawk {
+      ul {
+        @apply !float-left !list-none m-0 p-0 my-4;
+
+        li {
+          @apply !float-left m-0 mr-1.5 mb-1.5 p-0;
+
+          a {
+            @apply inline-block m-0 px-2 py-1;
+            background: #121212;
+            color: #42692c !important;
+          }
+        }
       }
     }
   }
@@ -1273,11 +1390,11 @@ footer {
 
   header {
     nav {
-      background-image: url(img/nav-bg-lil2.png) !important;
+      background-image: url(../gimg/nav-bg-lil2.png) !important;
       overflow: auto;
 
       #logo a {
-        background-image: url(img/xero-graff-alt-lil2.png) !important;
+        background-image: url(../gimg/xero-graff-alt-lil2.png) !important;
       }
 
       #linx {
@@ -1292,11 +1409,11 @@ footer {
 #error {
   header {
     nav {
-      background-image: url(img/nav-bg-lil5.png) !important;
+      background-image: url(../gimg/nav-bg-lil5.png) !important;
       overflow: auto;
 
       #logo a {
-        background-image: url(img/xero-graff-alt-lil5.png) !important;
+        background-image: url(../gimg/xero-graff-alt-lil5.png) !important;
       }
 
       #linx {
@@ -1311,13 +1428,21 @@ footer {
 @media (min-width: 600px) {
   #lab {
     #burger {
-      width: 186px;
-      height: 255px;
+      width: 186px !important;
+      max-width: 186px !important;
+      min-width: 186px !important;
+      height: 255px !important;
+      max-height: 255px !important;
+      min-height: 255px !important;
     }
 
     #codez {
-      width: 480px;
-      height: 255px;
+      width: 480px !important;
+      max-width: 480px !important;
+      min-width: 480px !important;
+      height: 255px !important;
+      max-height: 255px !important;
+      min-height: 255px !important;
     }
   }
 }
@@ -1326,10 +1451,10 @@ footer {
   #blog {
     header {
       nav {
-        background-image: url(img/nav-bg.png) !important;
+        background-image: url(../gimg/nav-bg.png) !important;
 
         #logo a {
-          background-image: url(img/xero-graff-alt.png) !important;
+          background-image: url(../gimg/xero-graff-alt.png) !important;
         }
       }
     }
@@ -1338,10 +1463,10 @@ footer {
   #code {
     header {
       nav {
-        background-image: url(img/nav-bg4.png) !important;
+        background-image: url(../gimg/nav-bg4.png) !important;
 
         #logo a {
-          background-image: url(img/xero-graff-alt4.png) !important;
+          background-image: url(../gimg/xero-graff-alt4.png) !important;
         }
       }
     }
@@ -1350,20 +1475,28 @@ footer {
   #lab {
     #burger {
       width: 190px !important;
+      max-width: 190px !important;
+      min-width: 190px !important;
       height: 266px !important;
+      max-height: 266px !important;
+      min-height: 266px !important;
     }
 
     #codez {
       width: 366px !important;
+      min-width: 366px !important;
+      max-width: 366px !important;
       height: 266px !important;
+      min-height: 266px !important;
+      max-height: 266px !important;
     }
 
     header {
       nav {
-        background-image: url(img/nav-bg3.png) !important;
+        background-image: url(../gimg/nav-bg3.png) !important;
 
         #logo a {
-          background-image: url(img/xero-graff-alt3.png) !important;
+          background-image: url(../gimg/xero-graff-alt3.png) !important;
         }
       }
     }
@@ -1372,10 +1505,10 @@ footer {
   #whois {
     header {
       nav {
-        background-image: url(img/nav-bg6.png) !important;
+        background-image: url(../gimg/nav-bg6.png) !important;
 
         #logo a {
-          background-image: url(img/xero-graff-alt6.png) !important;
+          background-image: url(../gimg/xero-graff-alt6.png) !important;
         }
       }
     }
@@ -1384,10 +1517,10 @@ footer {
   #feeds {
     header {
       nav {
-        background-image: url(img/nav-bg2.png) !important;
+        background-image: url(../gimg/nav-bg2.png) !important;
 
         #logo a {
-          background-image: url(img/xero-graff-alt2.png) !important;
+          background-image: url(../gimg/xero-graff-alt2.png) !important;
         }
       }
     }
@@ -1396,10 +1529,10 @@ footer {
   #error {
     header {
       nav {
-        background-image: url(img/nav-bg5.png) !important;
+        background-image: url(../gimg/nav-bg5.png) !important;
 
         #logo a {
-          background-image: url(img/xero-graff-alt5.png) !important;
+          background-image: url(../gimg/xero-graff-alt5.png) !important;
         }
       }
     }
@@ -1410,12 +1543,95 @@ footer {
   #lab {
     #burger {
       width: 229px !important;
+      max-width: 229px !important;
+      min-width: 229px !important;
       height: 320px !important;
+      max-height: 320px !important;
+      min-height: 320px !important;
     }
 
     #codez {
       width: 440px !important;
+      max-width: 440px !important;
+      min-width: 440px !important;
       height: 320px !important;
+      max-height: 320px !important;
+      min-height: 320px !important;
+      float: left !important;
+    }
+  }
+
+  #whois {
+    aside {
+      min-width: 300px !important;
+      min-height: 460px !important;
+    }
+  }
+}
+
+#splash {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #222 url(../gimg/xero-graff-splash.png) no-repeat;
+  background-position: center center;
+
+  .centerLogo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+		img {
+			margin: 0 auto;
+		}
+
+    ul {
+      list-style-type: none;
+      min-width: 400px;
+      text-align: center;
+
+      li {
+        display: inline-block;
+        margin: 0 auto;
+
+        a {
+          padding: 5px;
+          background: #222;
+          color: #c6c6c6;
+          transition: background-color 300ms ease-out;
+
+          &:hover {
+            background: #272822;
+            color: #d0d0d0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  #splash {
+    img {
+      width: 85%;
+      height: 85%;
+    }
+
+    ul {
+      min-width: 300px;
+
+      li {
+        font-size: 65%;
+
+        a {
+          padding: 2px;
+        }
+      }
     }
   }
 }
@@ -1428,7 +1644,6 @@ footer {
   padding: 0;
   border: 0;
   vertical-align: text-bottom;
-  font-family: "hack";
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -1444,81 +1659,107 @@ footer {
 .nf-cod-mail:before {
   content: "\eb1c";
 }
+
 .nf-fa-bolt:before {
   content: "\f0e7";
 }
+
 .nf-fa-book:before {
   content: "\f02d";
 }
+
 .nf-fa-camera:before {
   content: "\f030";
 }
+
 .nf-fa-code:before {
   content: "\f121";
 }
+
 .nf-fa-flask:before {
   content: "\f0c3";
 }
+
 .nf-fa-git:before {
   content: "\f1d3";
 }
+
 .nf-fa-key:before {
   content: "\f084";
 }
+
 .nf-fa-rss:before {
   content: "\f09e";
 }
+
 .nf-fa-user:before {
   content: "\f007";
 }
+
 .nf-fa-warning:before {
   content: "\f071";
 }
+
 .nf-fae-cc_cc:before {
   content: "\e291";
 }
+
 .nf-md-at:before {
   content: "\f0065";
 }
+
 .nf-md-coffin:before {
   content: "\f0b7f";
 }
+
 .nf-md-content_save_edit_outline:before {
   content: "\f0cfc";
 }
+
 .nf-md-data_matrix_scan:before {
   content: "\f1541";
 }
+
 .nf-md-delete_forever_outline:before {
   content: "\f0b89";
 }
+
 .nf-md-flask_plus:before {
   content: "\f1242";
 }
+
 .nf-md-folder_multiple:before {
   content: "\f0253";
 }
+
 .nf-md-git:before {
   content: "\f02a2";
 }
+
 .nf-md-menu_open:before {
   content: "\f0bab";
 }
+
 .nf-md-radioactive:before {
   content: "\f043c";
 }
+
 .nf-md-rss:before {
   content: "\f046b";
 }
+
 .nf-md-tag_multiple:before {
   content: "\f04fb";
 }
+
 .nf-md-tag_text:before {
   content: "\f1224";
 }
+
 .nf-seti-font:before {
   content: "\e659";
 }
+
 .nf-seti-git:before {
   content: "\e65d";
 }

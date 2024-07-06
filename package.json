@@ -9,7 +9,7 @@
   "type": "module",
   "scripts": {
     "init": "mkdir -p ./dist/ui && cp -r ./src/ui/i{co,mg} ./src/ui/hack.css ./dist/ui && cp ./node_modules/htmx.org/dist/htmx.min.js ./node_modules/htmx.org/dist/ext/head-support.js ./dist/ui && exit 0",
-    "css": "bun ./node_modules/postcss-cli/index.js -o ./dist/ui/theme.css ./src/ui/theme.css && exit 0",
+    "css": "bun ./node_modules/postcss-cli/index.js -o ./dist/ui/css/pixelgraff.css ./src/ui/css/pixelgraff.css && exit 0",
     "htmx": "bun src/index.ts && exit 0",
     "edit": "sudo bun --hot run src/server.ts",
     "start": "bun run init && bun run css && bun run htmx"
