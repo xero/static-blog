@@ -21,7 +21,7 @@
 body {
   @apply bg-grey;
   display: block;
-  display: linline;
+  display: inline;
 }
 
 .pixelated {
@@ -308,18 +308,13 @@ header {
         @apply text-sm my-4;
       }
 
-      img {
-        width: 0;
-        min-width: 100%;
-      }
-
       video,
       iframe,
       pre,
       code {
         @apply my-2;
         max-width: 380px !important;
-        max-height: auto !important;
+        height: auto !important;
       }
 
       h3.read {
@@ -1054,6 +1049,16 @@ footer {
       }
     }
   }
+  #main {
+    #content {
+      article {
+        img {
+          width: 0;
+          min-width: 100%;
+        }
+      }
+    }
+  }
 }
 
 #code {
@@ -1586,9 +1591,9 @@ footer {
     transform: translate(-50%, -50%);
     text-align: center;
 
-		img {
-			margin: 0 auto;
-		}
+    img {
+      margin: 0 auto;
+    }
 
     ul {
       list-style-type: none;
